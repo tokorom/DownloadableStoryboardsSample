@@ -7,40 +7,78 @@
 //
 
 #import "AppDelegate.h"
+#import "SSZipArchive.h"
+
+@interface AppDelegate () <SSZipArchiveDelegate>
+@end 
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    self.window.rootViewController = [storyboard instantiateInitialViewController];
+    [self.window makeKeyAndVisible];
+
+    [self downlodNewStoryboard];
+
     return YES;
 }
-							
-- (void)applicationWillResignActive:(UIApplication *)application
+
+- (void)downlodNewStoryboard
 {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+    NSURLSession* session = [NSURLSession sharedSession];
+    NSURL* url = [NSURL URLWithString:@"https://dl.dropboxusercontent.com/u/10351676/storyboards.bundle.zip"];
+
+    NSURLSessionTask* task;
+    task = [session dataTaskWithURL:url
+                  completionHandler:^(NSData* data, NSURLResponse* response, NSError* error)
+    {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            NSString* zipFileName = [self writeZipToFileWithData:data];
+            [self unzipBundleWithZipFileName:zipFileName];
+        }
+    }];
+
+    [task resume];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application
+- (NSString*)writeZipToFileWithData:(NSData*)data
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex:0];
+    NSString* path = [documentsDirectory stringByAppendingPathComponent:@"storyboards.zip"];
+    [data writeToFile:path atomically:YES]; 
+    return path;
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application
+- (NSString*)unzipBundleWithZipFileName:(NSString*)zipFileName
 {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDirectory = [paths objectAtIndex:0];
+    NSString* path = [documentsDirectory stringByAppendingPathComponent:@"storyboards.bundle"];
+    [SSZipArchive unzipFileAtPath:zipFileName toDestination:path delegate:self];
+    return path;
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application
+- (void)zipArchiveDidUnzipArchiveAtPath:(NSString*)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString*)unzippedPath
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
+    NSLog(@"unzipped: %@", unzippedPath);
 
-- (void)applicationWillTerminate:(UIApplication *)application
-{
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    NSURL* url = [NSURL fileURLWithPath:unzippedPath];
+    NSBundle* bundle = [NSBundle bundleWithURL:url];
+
+    NSLog(@"bundle: %@", bundle);
+    NSLog(@"resourcePath: %@", [bundle resourcePath]);
+    NSLog(@"bundlePath: %@", [bundle bundlePath]);
+
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone.storyboardc" bundle:bundle];
+
+    NSLog(@"storyboard: %@", storyboard);
 }
 
 @end

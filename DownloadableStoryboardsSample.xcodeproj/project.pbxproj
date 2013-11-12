@@ -14,7 +14,6 @@
 		C6148FD81832599500C0414D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148FD71832599500C0414D /* main.m */; };
 		C6148FDC1832599500C0414D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148FDB1832599500C0414D /* AppDelegate.m */; };
 		C6148FDF1832599500C0414D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6148FDD1832599500C0414D /* Main_iPhone.storyboard */; };
-		C6148FE21832599500C0414D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6148FE01832599500C0414D /* Main_iPad.storyboard */; };
 		C6148FE51832599500C0414D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148FE41832599500C0414D /* ViewController.m */; };
 		C6148FE71832599500C0414D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6148FE61832599500C0414D /* Images.xcassets */; };
 		C6148FEE1832599500C0414D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6148FED1832599500C0414D /* XCTest.framework */; };
@@ -22,6 +21,14 @@
 		C6148FF01832599500C0414D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6148FCF1832599500C0414D /* UIKit.framework */; };
 		C6148FF81832599500C0414D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6148FF61832599500C0414D /* InfoPlist.strings */; };
 		C6148FFA1832599500C0414D /* DownloadableStoryboardsSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148FF91832599500C0414D /* DownloadableStoryboardsSampleTests.m */; };
+		C614900518325DD500C0414D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614900418325DD500C0414D /* BaseViewController.m */; };
+		C61490071832606600C0414D /* Downloadable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61490061832606600C0414D /* Downloadable.storyboard */; };
+		C6149015183267A000C0414D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C614900B183267A000C0414D /* ioapi.c */; };
+		C6149016183267A000C0414D /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C614900D183267A000C0414D /* mztools.c */; };
+		C6149017183267A000C0414D /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C614900F183267A000C0414D /* unzip.c */; };
+		C6149018183267A000C0414D /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C6149011183267A000C0414D /* zip.c */; };
+		C6149019183267A000C0414D /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C6149014183267A000C0414D /* SSZipArchive.m */; };
+		C614901B183267E700C0414D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C614901A183267E700C0414D /* libz.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +53,6 @@
 		C6148FDA1832599500C0414D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C6148FDB1832599500C0414D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C6148FDE1832599500C0414D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		C6148FE11832599500C0414D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		C6148FE31832599500C0414D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		C6148FE41832599500C0414D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C6148FE61832599500C0414D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -55,6 +61,21 @@
 		C6148FF51832599500C0414D /* DownloadableStoryboardsSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadableStoryboardsSampleTests-Info.plist"; sourceTree = "<group>"; };
 		C6148FF71832599500C0414D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6148FF91832599500C0414D /* DownloadableStoryboardsSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadableStoryboardsSampleTests.m; sourceTree = "<group>"; };
+		C614900318325DD500C0414D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		C614900418325DD500C0414D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		C61490061832606600C0414D /* Downloadable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Downloadable.storyboard; sourceTree = "<group>"; };
+		C614900A183267A000C0414D /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		C614900B183267A000C0414D /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		C614900C183267A000C0414D /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		C614900D183267A000C0414D /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		C614900E183267A000C0414D /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		C614900F183267A000C0414D /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		C6149010183267A000C0414D /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		C6149011183267A000C0414D /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		C6149012183267A000C0414D /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		C6149013183267A000C0414D /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		C6149014183267A000C0414D /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		C614901A183267E700C0414D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C614901B183267E700C0414D /* libz.dylib in Frameworks */,
 				C6148FCE1832599500C0414D /* CoreGraphics.framework in Frameworks */,
 				C6148FD01832599500C0414D /* UIKit.framework in Frameworks */,
 				C6148FCC1832599500C0414D /* Foundation.framework in Frameworks */,
@@ -84,6 +106,7 @@
 		C6148FBF1832599500C0414D = {
 			isa = PBXGroup;
 			children = (
+				C6149008183267A000C0414D /* SSZipArchive */,
 				C6148FD11832599500C0414D /* DownloadableStoryboardsSample */,
 				C6148FF31832599500C0414D /* DownloadableStoryboardsSampleTests */,
 				C6148FCA1832599500C0414D /* Frameworks */,
@@ -103,6 +126,7 @@
 		C6148FCA1832599500C0414D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C614901A183267E700C0414D /* libz.dylib */,
 				C6148FCB1832599500C0414D /* Foundation.framework */,
 				C6148FCD1832599500C0414D /* CoreGraphics.framework */,
 				C6148FCF1832599500C0414D /* UIKit.framework */,
@@ -114,10 +138,12 @@
 		C6148FD11832599500C0414D /* DownloadableStoryboardsSample */ = {
 			isa = PBXGroup;
 			children = (
+				C614900318325DD500C0414D /* BaseViewController.h */,
+				C614900418325DD500C0414D /* BaseViewController.m */,
 				C6148FDA1832599500C0414D /* AppDelegate.h */,
 				C6148FDB1832599500C0414D /* AppDelegate.m */,
 				C6148FDD1832599500C0414D /* Main_iPhone.storyboard */,
-				C6148FE01832599500C0414D /* Main_iPad.storyboard */,
+				C61490061832606600C0414D /* Downloadable.storyboard */,
 				C6148FE31832599500C0414D /* ViewController.h */,
 				C6148FE41832599500C0414D /* ViewController.m */,
 				C6148FE61832599500C0414D /* Images.xcassets */,
@@ -153,6 +179,32 @@
 				C6148FF61832599500C0414D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6149008183267A000C0414D /* SSZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				C6149009183267A000C0414D /* minizip */,
+				C6149013183267A000C0414D /* SSZipArchive.h */,
+				C6149014183267A000C0414D /* SSZipArchive.m */,
+			);
+			path = SSZipArchive;
+			sourceTree = "<group>";
+		};
+		C6149009183267A000C0414D /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C614900A183267A000C0414D /* crypt.h */,
+				C614900B183267A000C0414D /* ioapi.c */,
+				C614900C183267A000C0414D /* ioapi.h */,
+				C614900D183267A000C0414D /* mztools.c */,
+				C614900E183267A000C0414D /* mztools.h */,
+				C614900F183267A000C0414D /* unzip.c */,
+				C6149010183267A000C0414D /* unzip.h */,
+				C6149011183267A000C0414D /* zip.c */,
+				C6149012183267A000C0414D /* zip.h */,
+			);
+			path = minizip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,8 +283,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6148FE21832599500C0414D /* Main_iPad.storyboard in Resources */,
 				C6148FE71832599500C0414D /* Images.xcassets in Resources */,
+				C61490071832606600C0414D /* Downloadable.storyboard in Resources */,
 				C6148FDF1832599500C0414D /* Main_iPhone.storyboard in Resources */,
 				C6148FD61832599500C0414D /* InfoPlist.strings in Resources */,
 			);
@@ -254,8 +306,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6148FE51832599500C0414D /* ViewController.m in Sources */,
+				C6149018183267A000C0414D /* zip.c in Sources */,
+				C6149019183267A000C0414D /* SSZipArchive.m in Sources */,
+				C6149017183267A000C0414D /* unzip.c in Sources */,
+				C614900518325DD500C0414D /* BaseViewController.m in Sources */,
+				C6149016183267A000C0414D /* mztools.c in Sources */,
 				C6148FDC1832599500C0414D /* AppDelegate.m in Sources */,
 				C6148FD81832599500C0414D /* main.m in Sources */,
+				C6149015183267A000C0414D /* ioapi.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,14 +350,6 @@
 				C6148FDE1832599500C0414D /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		C6148FE01832599500C0414D /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C6148FE11832599500C0414D /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		C6148FF61832599500C0414D /* InfoPlist.strings */ = {
