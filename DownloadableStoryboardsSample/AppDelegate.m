@@ -60,7 +60,7 @@
 {
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString* documentsDirectory = [paths objectAtIndex:0];
-    NSString* path = [documentsDirectory stringByAppendingPathComponent:@"storyboards.bundle"];
+    NSString* path = [documentsDirectory stringByAppendingPathComponent:@""];
     [SSZipArchive unzipFileAtPath:zipFileName toDestination:path delegate:self];
     return path;
 }
@@ -68,17 +68,26 @@
 - (void)zipArchiveDidUnzipArchiveAtPath:(NSString*)path zipInfo:(unz_global_info)zipInfo unzippedPath:(NSString*)unzippedPath
 {
     NSLog(@"unzipped: %@", unzippedPath);
+    NSString* bundlePath = [unzippedPath stringByAppendingPathComponent:@"storyboards.bundle"];
+    NSLog(@"bundlePath: %@", bundlePath);
 
-    NSURL* url = [NSURL fileURLWithPath:unzippedPath];
+    NSURL* url = [NSURL fileURLWithPath:bundlePath];
     NSBundle* bundle = [NSBundle bundleWithURL:url];
 
     NSLog(@"bundle: %@", bundle);
-    NSLog(@"resourcePath: %@", [bundle resourcePath]);
-    NSLog(@"bundlePath: %@", [bundle bundlePath]);
 
-    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone.storyboardc" bundle:bundle];
-
+    UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Downloadable" bundle:bundle];
     NSLog(@"storyboard: %@", storyboard);
+    UIViewController* viewController = [storyboard instantiateInitialViewController];
+
+    //UINib* nib = [UINib nibWithNibName:@"DownloadableViewController" bundle:bundle];
+    //NSLog(@"nib: %@", nib);
+    //UIViewController* viewController;
+    //viewController = [[UIViewController alloc] initWithNibName:@"DownloadableViewController" bundle:bundle];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.window.rootViewController presentViewController:viewController animated:YES completion:nil];
+    });
 }
 
 @end

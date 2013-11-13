@@ -524,6 +524,7 @@
 				C6148FFF1832599500C0414D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C61490001832599500C0414D /* Build configuration list for PBXNativeTarget "DownloadableStoryboardsSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +533,7 @@
 				C61490021832599500C0414D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
