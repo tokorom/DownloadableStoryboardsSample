@@ -21,14 +21,13 @@
 		C6148FF01832599500C0414D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6148FCF1832599500C0414D /* UIKit.framework */; };
 		C6148FF81832599500C0414D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C6148FF61832599500C0414D /* InfoPlist.strings */; };
 		C6148FFA1832599500C0414D /* DownloadableStoryboardsSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6148FF91832599500C0414D /* DownloadableStoryboardsSampleTests.m */; };
-		C614900518325DD500C0414D /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C614900418325DD500C0414D /* BaseViewController.m */; };
-		C61490071832606600C0414D /* Downloadable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C61490061832606600C0414D /* Downloadable.storyboard */; };
 		C6149015183267A000C0414D /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C614900B183267A000C0414D /* ioapi.c */; };
 		C6149016183267A000C0414D /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C614900D183267A000C0414D /* mztools.c */; };
 		C6149017183267A000C0414D /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C614900F183267A000C0414D /* unzip.c */; };
 		C6149018183267A000C0414D /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C6149011183267A000C0414D /* zip.c */; };
 		C6149019183267A000C0414D /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C6149014183267A000C0414D /* SSZipArchive.m */; };
 		C614901B183267E700C0414D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C614901A183267E700C0414D /* libz.dylib */; };
+		C6A68FA318336E470006D26C /* Downloadable.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6A68FA218336E470006D26C /* Downloadable.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,9 +60,6 @@
 		C6148FF51832599500C0414D /* DownloadableStoryboardsSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadableStoryboardsSampleTests-Info.plist"; sourceTree = "<group>"; };
 		C6148FF71832599500C0414D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C6148FF91832599500C0414D /* DownloadableStoryboardsSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadableStoryboardsSampleTests.m; sourceTree = "<group>"; };
-		C614900318325DD500C0414D /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		C614900418325DD500C0414D /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		C61490061832606600C0414D /* Downloadable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Downloadable.storyboard; sourceTree = "<group>"; };
 		C614900A183267A000C0414D /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
 		C614900B183267A000C0414D /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
 		C614900C183267A000C0414D /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
@@ -76,6 +72,7 @@
 		C6149013183267A000C0414D /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		C6149014183267A000C0414D /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		C614901A183267E700C0414D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C6A68FA218336E470006D26C /* Downloadable.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Downloadable.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,12 +135,10 @@
 		C6148FD11832599500C0414D /* DownloadableStoryboardsSample */ = {
 			isa = PBXGroup;
 			children = (
-				C614900318325DD500C0414D /* BaseViewController.h */,
-				C614900418325DD500C0414D /* BaseViewController.m */,
 				C6148FDA1832599500C0414D /* AppDelegate.h */,
 				C6148FDB1832599500C0414D /* AppDelegate.m */,
 				C6148FDD1832599500C0414D /* Main_iPhone.storyboard */,
-				C61490061832606600C0414D /* Downloadable.storyboard */,
+				C6A68FA218336E470006D26C /* Downloadable.storyboard */,
 				C6148FE31832599500C0414D /* ViewController.h */,
 				C6148FE41832599500C0414D /* ViewController.m */,
 				C6148FE61832599500C0414D /* Images.xcassets */,
@@ -284,8 +279,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6148FE71832599500C0414D /* Images.xcassets in Resources */,
-				C61490071832606600C0414D /* Downloadable.storyboard in Resources */,
 				C6148FDF1832599500C0414D /* Main_iPhone.storyboard in Resources */,
+				C6A68FA318336E470006D26C /* Downloadable.storyboard in Resources */,
 				C6148FD61832599500C0414D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +304,6 @@
 				C6149018183267A000C0414D /* zip.c in Sources */,
 				C6149019183267A000C0414D /* SSZipArchive.m in Sources */,
 				C6149017183267A000C0414D /* unzip.c in Sources */,
-				C614900518325DD500C0414D /* BaseViewController.m in Sources */,
 				C6149016183267A000C0414D /* mztools.c in Sources */,
 				C6148FDC1832599500C0414D /* AppDelegate.m in Sources */,
 				C6148FD81832599500C0414D /* main.m in Sources */,
